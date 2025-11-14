@@ -28,7 +28,7 @@
   padding-bottom: 10px;
 }
 
-/* === Hero Section === */
+
 .hero-section {
   background: linear-gradient(
       rgba(20, 2, 1, 0.5),
@@ -80,7 +80,7 @@
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
-/* === General Sections === */
+
 .section-title {
   color: var(--gold);
   border-bottom: 2px solid var(--parchment-dark);
@@ -98,7 +98,6 @@
   padding: 2rem 1rem !important;
 }
 
-/* === Map & Points === */
 .map-container {
   position: relative;
   width: 100%;
@@ -264,7 +263,6 @@
   opacity: 1;
 }
 
-/* === Cards === */
 .card-img-top {
   border-radius: 10px 10px 0 0;
   height: 200px;
