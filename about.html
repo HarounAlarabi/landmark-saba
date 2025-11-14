@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+     <img src="images/logo.jpg" alt="Logo" width="30" height="30" class="logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="landmark.html">Landmark</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" href="heritage.html">Heritage</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+ <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <!-- Title from the PDF wireframe -->
+          <h1 class="display-4 text-center">About This Project</h1>
+          <hr class="my-4" />
+
+          <!-- Content from the PDF -->
+          <p class="lead">
+            The "Kingdom of Saba Digital Archive" is a dedicated educational
+            resource committed to cataloging, preserving, and sharing the rich
+            history and cultural heritage of the ancient Sabaean kingdom.
+          </p>
+          <p>
+            For centuries, the Kingdom of Saba was a major power, mastering the
+            lucrative incense trade and building monumental wonders like the
+            Marib Dam and the Barran Temple. Its unique Musnad script, intricate
+            art, and complex society left an indelible mark on history, yet this
+            heritage is not always widely known.
+          </p>
+          <p>
+            Our mission is to bring this remarkable civilization to life for a
+            new generation. We aim to provide an accessible and accurate source
+            of information for students, researchers, and anyone curious about
+            the ancient world. Through digital exhibits, historical summaries,
+            and visual galleries, we hope to foster a deeper appreciation for
+            Sabaean contributions to global heritage.
+          </p>
+          <p>
+            This project is a living archive, and we are continuously working
+            to expand its content. We invite you to explore the landmarks,
+            discover the history, and learn about the unique culture of the
+            Sabaeans.
+          </p>
+
+          <!-- === NEW CONTACT FORM SECTION === -->
+          <hr class="my-5" />
+
+          <h2 class="text-center mb-4">Contact Us</h2>
+          <p class="text-center text-muted mb-4">
+            Have a question, a suggestion, or want to contribute? We'd love to
+            hear from you.
+          </p>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <!-- Simple form. 'action' and 'method' are placeholders. -->
+              <form id="contactForm">
+                <!-- Name input -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <!-- Email input -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+                <!-- Message textarea -->
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Your message..."
+                    required
+                  ></textarea>
+                </div>
+                <!-- Submit button -->
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-lg px-5">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+              <!-- Message displayed on form submit -->
+              <div
+                id="formMessage"
+                class="text-center mt-4"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+          <!-- === END OF NEW SECTION === -->
+        </div>
+      </div>
+    </div>
+
+
+   <footer class="text-center py-4 mt-5 bg-light">
+        <div class="container">
+            <p class="mb-0 text-muted">
+                2025 Kingdom of Saba Digital Archive. Preserving ancient heritage for future generations.
+            </p>
+        </div>
+
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

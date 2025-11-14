@@ -1,0 +1,283 @@
+:root {
+  --parchment: #f4e4bc;
+  --parchment-dark: #d9c89e;
+  --gold: #c9a227;
+  --desert-sand: #e6c9a8;
+  --desert-dark: #b8945f;
+  --incense: #8b4513;
+}
+
+/* === Reset === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Body === */
+body {
+ 
+  line-height: 1.6;
+  overflow-x: hidden;
+  color: var(--incense) !important;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.05"><rect width="100" height="100" fill="%23000"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23fff" stroke-width="1"/></svg>');
+}
+
+/* === Header & Navbar (from your code) === */
+.navbar {
+  background: linear-gradient(to right, rgba(44, 26, 13, 0.95), rgba(44, 16, 13, 0.85));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1000;
+  height: 5rem;
+   /* ensure it's above page content */
+}
+.logo {
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--gold);
+  margin-left: 3rem;
+}
+/* Force the collapsed menu to overlay content instead of pushing it */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(44, 26, 13, 0.98), rgba(44, 16, 13, 0.95));
+    z-index: 999;
+    padding: 1rem;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 0.75rem 0;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background: rgba(201, 162, 39, 0.15);
+  }
+}
+
+/* Styling navbar links to match your theme */
+.navbar-brand,
+.nav-link {
+  color: var(--parchment) !important;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.navbar-brand:hover,
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold) !important;
+  transform: translateY(-2px);
+}
+
+/* Mobile toggle button */
+.navbar-toggler {
+  background-color: var(--parchment-dark);
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0.8);
+}
+
+/* === Page Titles & Content (Added) === */
+.display-4,
+h1,
+h2,
+h3,
+h5.card-title {
+  font-family: "Georgia", serif;
+  font-weight: 600;
+}
+
+
+
+
+/* Style for the <hr> divider */
+hr {
+  background-color: var(--gold);
+  opacity: 0.5;
+  height: 2px;
+}
+
+
+/* === Custom Button (Added) === */
+.btn-custom {
+  background-color: var(--desert-dark);
+  color: var(--parchment);
+  border: 1px solid var(--gold);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: var(--gold);
+  color: var(--incense);
+  border-color: var(--parchment);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* === Footer (Added) === */
+.site-footer {
+  /* Using a similar style to your navbar for consistency */
+  background: linear-gradient(to right, rgba(44, 26, 13, 0.95), rgba(44, 16, 13, 0.85));
+  border-top: 2px solid var(--gold);
+  padding: 2rem 0; /* More spacing for the footer */
+}
+
+.site-footer p {
+  color: var(--parchment-dark) !important;
+  margin-bottom: 0;
+}
+
+
+
+.timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 0;
+}
+
+/* The vertical line */
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--desert-dark);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item-content {
+  position: relative;
+  width: 45%;
+  background-color: rgba(44, 26, 13, 0.85); /* Match card bg */
+  border: 1px solid var(--desert-dark);
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Align items left and right */
+.timeline-item:nth-child(odd) .timeline-item-content {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-item-content {
+  left: 55%;
+}
+
+/* Add the timeline circle */
+.timeline-item-content:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  border: 4px solid var(--parchment);
+  z-index: 1; /* Ensure circle is on top of the line */
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content:after {
+  right: -30px;
+  transform: translateX(50%); /* Center on the line */
+}
+
+.timeline-item:nth-child(even) .timeline-item-content:after {
+  left: -30px;
+  transform: translateX(-50%); /* Center on the line */
+}
+
+/* Add arrows */
+.timeline-item-content:before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content:before {
+  right: -10px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--desert-dark);
+}
+
+.timeline-item:nth-child(even) .timeline-item-content:before {
+  left: -10px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--desert-dark) transparent transparent;
+}
+
+/* Timeline content styling */
+.timeline-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+
+.timeline-text {
+  font-size: 0.95rem;
+  color: var(--parchment);
+  margin-bottom: 0; /* Remove default p margin */
+}
+
+/* --- Timeline Responsive (for mobile) --- */
+@media (max-width: 767.98px) {
+  .timeline:before {
+    left: 20px; /* Move line to the left */
+  }
+
+  .timeline-item-content {
+    width: 90%;
+    left: 10% !important; /* All items on the right */
+    text-align: left !important;
+  }
+
+  .timeline-item-content:after {
+    left: -30px !important;
+    transform: translateX(-50%) !important; /* Center on the line */
+  }
+
+  .timeline-item-content:before {
+    left: -10px !important;
+    border-width: 10px 10px 10px 0 !important;
+    border-color: transparent var(--desert-dark) transparent transparent !important;
+  }
+}
+
+
+/* === Heritage Section === */
+.carousel-img {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
